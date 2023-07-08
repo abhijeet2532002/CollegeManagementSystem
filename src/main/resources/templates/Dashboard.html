@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+
+  <!-- Bootstrap Link css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Font awsome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bootstrap js Link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-dark bg-opacity-75">
+  <div class="container-fluid px-5">
+    <a class="navbar-brand text-white" style="font-weight: 600; font-size: 1.3rem;" href="#"><i
+            class="fas fa-school"></i> <u>MS COLLEGE</u></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="/dashboard"><i
+                  class="fas fa-tachometer-alt"></i> Dashboard</a>
+        </li>
+        <li class="nav-item dropdown text-white">
+          <a class="nav-link active text-white" aria-current="page" href="/student">Student</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="/teacher">Teacher</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="/subject">Subject</a>
+        </li>
+        <li class="nav-item dropdown text-white">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Account
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Fee Collection</a></li>
+            <li><a class="dropdown-item" href="#">Expenses</a></li>
+            <li><a class="dropdown-item" href="#">Add Expenses</a></li>
+            <li><a class="dropdown-item" href="#">Salary</a></li>
+            <li><a class="dropdown-item" href="#">Add Salary</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown text-white">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Others
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/holiday">Holiday</a></li>
+            <li><a class="dropdown-item" href="#">Time Table</a></li>
+            <li><a class="dropdown-item" href="#">Courses</a></li>
+            <li><a class="dropdown-item" href="/syllabus">Syllabus</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="#"><i class="fas fa-user-slash"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="dash mt-5" id="heading">
+  <div class="msg container mt-5 py-4">
+    <h4><i class="fas fa-tachometer-alt"></i> <u>Dashboard</u></h4>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 py-4">
+      <div class="col">
+        <div class="card h-100">
+          <div class="row g-2">
+            <div class="col-7">
+              <div class="card h-100 border-0 ps-3 pt-1">
+                <h4 class="card-title"><u>Students</u></h4>
+                <h5>50+</h5>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="card h-100 border-0 d-flex justify-content-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhOJCTXhbJaEDSP4QVO_eCnMsk1WflpBb3A&usqp=CAU"
+                     class="card-img-top h-75" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <div class="row g-2">
+            <div class="col-7">
+              <div class="card h-100 border-0 ps-3 pt-1">
+                <h4 class="card-title"><u>Teachers</u></h4>
+                <h5>5+</h5>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="card h-100 border-0 d-flex justify-content-center">
+                <img src="https://www.pinpng.com/pngs/m/53-531554_teachers-and-students-png-transparent-png.png"
+                     class="card-img-top h-75" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <div class="row g-2 d-flex justify-content-center">
+            <div class="col-7">
+              <div class="card h-100 border-0 ps-3 pt-1">
+                <h4 class="card-title"><u>Department</u></h4>
+                <h5>1+</h5>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="card h-100 border-0 d-flex justify-content-center ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz0rFnIfYA8mLNS0JCHqU3UHq5-73RJZS-aQ3OcB1UBi9BnOoc_xJgCTKTvK_1ipvZGgY&usqp=CAU"
+                     class="card-img-top" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <div class="row g-2">
+            <div class="col-7">
+              <div class="card h-100 border-0 ps-3 pt-1">
+                <h4 class="card-title"><u>Revenue</u></h4>
+                <h5>RS 100,000+</h5>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="card h-100 border-0 d-flex justify-content-center">
+                <img src="https://www.bamboohr.com/blog/media_164933aa57ac476c85230d181b31f5fd640279ba6.png?width=750&format=png&optimize=medium"
+                     class="card-img-top h-75" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stTable container" id="stTable">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col-md-7">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4 class="card-title">Student : </h4>
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              <th scope="col">Roll no</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Class</th>
+              <th scope="col">Marks</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">2040907</th>
+              <td>Abhijeet kumar</td>
+              <td>BCA - 5TH SEMISTER</td>
+              <td>499</td>
+            </tr>
+            <tr>
+              <th scope="row">2040907</th>
+              <td>Abhijeet kumar</td>
+              <td>BCA - 5TH SEMISTER</td>
+              <td>499</td>
+            </tr>
+            <tr>
+              <th scope="row">2040907</th>
+              <td>Abhijeet kumar</td>
+              <td>BCA - 5TH SEMISTER</td>
+              <td>499</td>
+            </tr>
+            <tr>
+              <th scope="row">2040907</th>
+              <td>Abhijeet kumar</td>
+              <td>BCA - 5TH SEMISTER</td>
+              <td>499</td>
+            </tr>
+            <tr>
+              <th scope="row">2040907</th>
+              <td>Abhijeet kumar</td>
+              <td>BCA - 5TH SEMISTER</td>
+              <td>499</td>
+            </tr>
+            <tr>
+              <th scope="row">2040907</th>
+              <td>Abhijeet kumar</td>
+              <td>BCA - 5TH SEMISTER</td>
+              <td>499</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4 class="card-title">Teacher : </h4>
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Department</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">MS/BCA-01</th>
+              <td>Anjna Mam</td>
+              <td>BCA</td>
+            </tr>
+            <tr>
+              <th scope="row">MS/BCA-02</th>
+              <td>Prabhat sir</td>
+              <td>BCA</td>
+            </tr>
+            <tr>
+              <th scope="row">MS/BCA-03</th>
+              <td>Vinay sir</td>
+              <td>BCA</td>
+            </tr>
+            <tr>
+              <th scope="row">MS/BCA-04</th>
+              <td>Ram Sir</td>
+              <td>BCA</td>
+            </tr>
+            <tr>
+              <th scope="row">MS/BCA-05</th>
+              <td>Ashish kumar</td>
+              <td>BCA</td>
+            </tr>
+            <tr>
+              <th scope="row">MS/BCA-06</th>
+              <td>Shwtanshu sir</td>
+              <td>BCA</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

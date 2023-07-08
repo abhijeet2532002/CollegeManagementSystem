@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holidays</title>
+
+    <!-- Bootstrap Link css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font awsome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap js Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-dark bg-opacity-75">
+    <div class="container-fluid px-5">
+        <a class="navbar-brand text-white" style="font-weight: 600; font-size: 1.3rem;" href="#">
+            <i class="fas fa-school"></i> <u>MS COLLEGE</u>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="/dashboard"><i
+                            class="fas fa-tachometer-alt"></i> Dashboard</a>
+                </li>
+                <li class="nav-item dropdown text-white">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Student
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">List</a></li>
+                        <li><a class="dropdown-item" href="#">View</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="/teacher">Teacher</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="/subject">Subject</a>
+                </li>
+                <li class="nav-item dropdown text-white">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Account
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Fee Collection</a></li>
+                        <li><a class="dropdown-item" href="#">Expenses</a></li>
+                        <li><a class="dropdown-item" href="#">Add Expenses</a></li>
+                        <li><a class="dropdown-item" href="#">Salary</a></li>
+                        <li><a class="dropdown-item" href="#">Add Salary</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown text-white">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Others
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/holiday">Holiday</a></li>
+                        <li><a class="dropdown-item" href="#">Time Table</a></li>
+                        <li><a class="dropdown-item" href="/syllabus">Syllabus</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#"><i
+                            class="fas fa-user-slash"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="stTable container" id="stTable">
+    <div class="row">
+        <div class="card mt-5 mb-2 border-0">
+            <div class="card-body">
+                <h2 class="text-start pt-3 pb-4"> <i class="fas fa-calendar-check"></i> <u>Holidays</u></h2>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">S.NO</th>
+                        <th scope="col">Name of holiday</th>
+                        <th scope="col">No of Days</th>
+                        <th scope="col">from date</th>
+                        <th scope="col">to date</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <th scope="col">01</th>
+                        <th scope="col">New Year's Day</th>
+                        <th scope="col">01</th>
+                        <th scope="col">01/01/2023</th>
+                        <th scope="col">02/01/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">02</th>
+                        <th scope="col">Makar Sankranti</th>
+                        <th scope="col">01</th>
+                        <th scope="col">15/01/2023</th>
+                        <th scope="col">16/01/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">03</th>
+                        <th scope="col">Karpuri thakur jaynti</th>
+                        <th scope="col">01</th>
+                        <th scope="col">24/01/2023</th>
+                        <th scope="col">25/01/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">04</th>
+                        <th scope="col">Republic Day/Vasant Panchami</th>
+                        <th scope="col">01</th>
+                        <th scope="col">26/01/2023</th>
+                        <th scope="col">27/01/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">05</th>
+                        <th scope="col">Guru Ravidas Jayanti/Hazarat Ali's Birthday</th>
+                        <th scope="col">01</th>
+                        <th scope="col">05/02/2023</th>
+                        <th scope="col">06/02/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">06</th>
+                        <th scope="col">Maha Shivaratri/Shivaratri</th>
+                        <th scope="col">01</th>
+                        <th scope="col">18/02/2023</th>
+                        <th scope="col">19/02/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">07</th>
+                        <th scope="col">Holi</th>
+                        <th scope="col">04</th>
+                        <th scope="col">06/03/2023</th>
+                        <th scope="col">10/03/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">08</th>
+                        <th scope="col">Bihar Diwas</th>
+                        <th scope="col">01</th>
+                        <th scope="col">22/03/2023</th>
+                        <th scope="col">23/03/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">09</th>
+                        <th scope="col">Samrat Ashok Asthmi</th>
+                        <th scope="col">01</th>
+                        <th scope="col">29/01/2023</th>
+                        <th scope="col">30/01/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">10</th>
+                        <th scope="col">Rama Navami</th>
+                        <th scope="col">01</th>
+                        <th scope="col">30/01/2023</th>
+                        <th scope="col">31/01/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">11</th>
+                        <th scope="col">Mahavir Jayanti</th>
+                        <th scope="col">01</th>
+                        <th scope="col">04/04/2023</th>
+                        <th scope="col">05/04/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">12</th>
+                        <th scope="col">Good Friday</th>
+                        <th scope="col">01</th>
+                        <th scope="col">07/04/2023</th>
+                        <th scope="col">08/04/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">13</th>
+                        <th scope="col">Vaisakhi/Ambedkar Jayanti</th>
+                        <th scope="col">01</th>
+                        <th scope="col">14/04/2023</th>
+                        <th scope="col">15/04/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">14</th>
+                        <th scope="col">Ramzan Id/Eid-ul-Fitar</th>
+                        <th scope="col">01</th>
+                        <th scope="col">21/04/2023</th>
+                        <th scope="col">22/04/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">15</th>
+                        <th scope="col">Eid</th>
+                        <th scope="col">02</th>
+                        <th scope="col">22/04/2023</th>
+                        <th scope="col">24/04/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">16</th>
+                        <th scope="col">Jaanki nawmi</th>
+                        <th scope="col">01</th>
+                        <th scope="col">29/04/2023</th>
+                        <th scope="col">30/04/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">17</th>
+                        <th scope="col">International Worker's Day</th>
+                        <th scope="col">01</th>
+                        <th scope="col">01/05/2023</th>
+                        <th scope="col">02/05/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">18</th>
+                        <th scope="col">Name of holiday</th>
+                        <th scope="col">01</th>
+                        <th scope="col">05/05/2023</th>
+                        <th scope="col">06/05/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">19</th>
+                        <th scope="col">Buddha Purnima/Vesak</th>
+                        <th scope="col">01</th>
+                        <th scope="col">04/06/2023</th>
+                        <th scope="col">05/06/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">20</th>
+                        <th scope="col">Father's Day</th>
+                        <th scope="col">01</th>
+                        <th scope="col">18/06/2023</th>
+                        <th scope="col">19/06/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">21</th>
+                        <th scope="col">Bakrid/Eid ul-Adha</th>
+                        <th scope="col">02</th>
+                        <th scope="col">29/06/2023</th>
+                        <th scope="col">1/07/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">22</th>
+                        <th scope="col">Muharram/Ashura</th>
+                        <th scope="col">02</th>
+                        <th scope="col">29/07/2023</th>
+                        <th scope="col">31/07/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">23</th>
+                        <th scope="col">Independence Day</th>
+                        <th scope="col">01</th>
+                        <th scope="col">15/08/2023</th>
+                        <th scope="col">16/08/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">24</th>
+                        <th scope="col">Name of holiday</th>
+                        <th scope="col">01</th>
+                        <th scope="col">28/08/2023</th>
+                        <th scope="col">29/08/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">25</th>
+                        <th scope="col">Raksha Bandhan (Rakhi)</th>
+                        <th scope="col">01</th>
+                        <th scope="col">30/08/2023</th>
+                        <th scope="col">31/08/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">26</th>
+                        <th scope="col">Teacher's Day</th>
+                        <th scope="col">01</th>
+                        <th scope="col">05/09/2023</th>
+                        <th scope="col">06/09/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">27</th>
+                        <th scope="col">Vishkarma puja</th>
+                        <th scope="col">01</th>
+                        <th scope="col">17/09/2023</th>
+                        <th scope="col">18/09/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">28</th>
+                        <th scope="col">Milad un-Nabi/Id-e-Milad</th>
+                        <th scope="col">01</th>
+                        <th scope="col">28/09/2023</th>
+                        <th scope="col">29/09/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">29</th>
+                        <th scope="col">Mahatma Gandhi Jayanti</th>
+                        <th scope="col">01</th>
+                        <th scope="col">02/10/2023</th>
+                        <th scope="col">03/10/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">30</th>
+                        <th scope="col">Jay prakash narayan jayanti</th>
+                        <th scope="col">01</th>
+                        <th scope="col">11/10/2023</th>
+                        <th scope="col">12/10/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">31</th>
+                        <th scope="col">First Day of Sharad Navratri</th>
+                        <th scope="col">01</th>
+                        <th scope="col">15/10/2023</th>
+                        <th scope="col">16/10/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">32</th>
+                        <th scope="col">Durga puja</th>
+                        <th scope="col">05</th>
+                        <th scope="col">21/10/2023</th>
+                        <th scope="col">26/10/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">33</th>
+                        <th scope="col">Diwali/Deepavali/Govardhan Puja/Bhai Duj/Chhat Puja</th>
+                        <th scope="col">10</th>
+                        <th scope="col">12/11/2023</th>
+                        <th scope="col">21/11/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">34</th>
+                        <th scope="col">Guru Nanak Jayanti</th>
+                        <th scope="col">01</th>
+                        <th scope="col">27/11/2023</th>
+                        <th scope="col">28/11/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">35</th>
+                        <th scope="col">Dr Rajender Parsad Jayanti</th>
+                        <th scope="col">01</th>
+                        <th scope="col">03/12/2023</th>
+                        <th scope="col">04/12/2023</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">36</th>
+                        <th scope="col">Christmas/Winter Vication</th>
+                        <th scope="col">08</th>
+                        <th scope="col">24/12/2023</th>
+                        <th scope="col">31/12/2023</th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
